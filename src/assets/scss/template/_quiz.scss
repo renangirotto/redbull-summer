@@ -1,0 +1,7 @@
+.quiz {
+    padding: 15px 0 15px;
+
+    @media #{$mq-md} {
+        padding: 75px 0;
+    }
+}

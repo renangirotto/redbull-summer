@@ -1,0 +1,172 @@
+.hero {
+    position: relative;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 72px 20px 44px;
+
+    @media #{$mq-md} {
+        flex-direction: row;
+        justify-content: center;
+        padding: 89px 20px 140px;
+    }
+
+    @media #{$mq-lg} {
+        padding: 89px 0 85px;
+    }
+
+    .hero-can {
+        width: 100%;
+        max-width: 239px;
+        height: 390px;
+        margin: 0 auto;
+        background-image: url("../images/can-hero-mobile.png");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 100%;
+
+        @media #{$mq-md} {
+            max-width: 276px;
+            height: 646px;
+            margin: 0 70px 0 0;
+            background-image: url("../images/can-hero-desktop.png");
+        }
+
+        @media #{$mq-lg} {
+            max-width: 406px;
+            height: 935px;
+            margin: 84px 140px 0 0;
+        }
+    }
+
+    .hero-text {
+        margin-top: -41px;
+
+        @media #{$mq-md} {
+            margin-top: 0;
+        }
+
+        @media #{$mq-lg} {
+            margin-top: -72px;
+        }
+
+        &:not(:last-child) {
+            margin-bottom: 64px;
+
+            @media #{$mq-md} {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    .hero-title {
+        font-weight: 700;
+        font-size: 40.5px;
+        text-transform: uppercase;
+        line-height: 1.048;
+        color: $c-white;
+
+        @media #{$mq-md} {
+            font-size: 48px;
+        }
+
+        @media #{$mq-lg} {
+            font-size: 61.15px;
+        }
+
+        &:not(:last-child) {
+            margin-bottom: 32px;
+        }
+
+        span {
+            color: $c-yellow-1;
+        }
+    }
+
+    .hero-list {
+        font-weight: 900;
+        font-size: 18.42px;
+        color: $c-white;
+        counter-reset: list-number;
+
+        @media #{$mq-md} {
+            font-size: 24.12px;
+        }
+
+        > li {
+            position: relative;
+            display: flex;
+            line-height: 1.2;
+            text-shadow: 0px 3px 1px $c-pink-1;
+
+            &:not(:last-child) {
+                margin-bottom: 16px;
+
+                @media #{$mq-md} {
+                    margin-bottom: 20px;
+                }
+            }
+
+            &::before {
+                counter-increment: list-number;
+                content: "#" counter(list-number);
+                margin-right: 8px;
+                color: $c-brown-1;
+            }
+        }
+    }
+
+    .hero-anchor {
+        font-family: $f-futura;
+        font-weight: 500;
+        color: $c-green-2;
+
+        @media #{$mq-md} {
+            position: absolute;
+            bottom: 164px;
+        }
+
+        @media #{$mq-lg} {
+            position: absolute;
+            bottom: 142px;
+        }
+
+        span {
+            font-size: 16.67px;
+
+            @media #{$mq-lg} {
+                font-size: 20.83px;
+            }
+        }
+
+        .arrow {
+            position: relative;
+            width: 32px;
+            height: 18px;
+            margin: 18px auto 0;
+        
+            &::before,
+            &::after {
+                content: "";
+                display: block;
+                width: 20px;
+                height: 4px;
+                border-radius: 4px;
+                position: absolute;
+                top: 6px;
+                background-color: $c-white;
+            }
+        
+            &::before {
+                left: 0;
+                transform: rotate(45deg);
+            }
+        
+            &::after {
+                right: 0;
+                transform: rotate(-45deg);
+            }
+        }
+    }
+}
