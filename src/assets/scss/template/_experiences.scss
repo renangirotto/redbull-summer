@@ -133,11 +133,6 @@
             margin-bottom: 0;
             overflow: visible;
 
-            .carousel-3d-slider {
-                transform-style: preserve-3d;
-                perspective: 1000px !important;
-            }
-
             .carousel-3d-slide {
                 border: 0;
                 background-color: transparent;
@@ -242,6 +237,7 @@
                 border: 2px solid $c-pink-3;
                 border-radius: 50%;
                 background-color: transparent;
+                cursor: pointer;
 
                 @media #{$mq-md} {
                     width: 13px;

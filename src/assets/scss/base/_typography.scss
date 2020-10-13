@@ -103,7 +103,7 @@ body {
     text-align: center;
     text-shadow: 0px 4px 1px $c-red-1;
     line-height: 1.2;
-    color: $c-yellow-2;
+    color: $c-yellow-1;
 
     @media #{$mq-md} {
         font-size: 40px;
@@ -135,6 +135,6 @@ body {
     color: $c-white;
 
     span {
-        color: $c-yellow-2;
+        color: $c-yellow-1;
     }
 }

@@ -1,0 +1,53 @@
+.btn {
+    cursor: pointer;
+
+    &.yellow-1 {
+        border-radius: 15px;
+        padding: 6px 20px;
+        font-family: $f-futura-cond;
+        font-weight: 700;
+        font-size: 12.5px;
+        color: $c-brown-2;
+        background-color: $c-yellow-1;
+
+        @media #{$mq-md} {
+            padding: 8px 40px;
+            border-radius: 25px;
+            font-size: 26.92px;
+        }
+    }
+
+    &.yellow-2 {
+        border-radius: 15px;
+        padding: 6px 30px;
+        font-family: $f-futura-cond;
+        font-weight: 800;
+        font-style: italic;
+        font-size: 12.5px;
+        color: $c-pink-4;
+        background-color: $c-yellow-1;
+
+        @media #{$mq-md} {
+            padding: 8px 68px;
+            border-radius: 25px;
+            font-size: 26.92px;
+        }
+    }
+
+    &.pink-1 {
+        border-radius: 15px;
+        padding: 6px 12px;
+        font-family: $f-futura-cond;
+        font-weight: 800;
+        font-style: italic;
+        font-size: 12.5px;
+        color: $c-pink-5;
+        background-color: $c-pink-2;
+
+        @media #{$mq-md} {
+            padding: 8px 30px;
+            border-radius: 25px;
+            font-size: 26.92px;
+        }
+    }
+}
