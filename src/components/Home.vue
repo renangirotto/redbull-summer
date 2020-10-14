@@ -44,7 +44,7 @@
             :controls-height="carousel.arrows"
             @before-slide-change="onBeforeSlideChange"
           >
-            <slide :index="0">
+            <slide3d :index="0">
               <div class="card lucas-chumbo">
                 <h3 class="card-title">
                   <span class="line">SURF <span class="small">COM</span></span
@@ -52,18 +52,17 @@
                   <span class="large">LUCAS CHUMBO</span>
                 </h3>
               </div>
-            </slide>
-            <slide :index="1">
-              <div class="card flakes-power">
+            </slide3d>
+            <slide3d :index="1">
+              <div class="card sandro-dias">
                 <h3 class="card-title">
-                  <span class="line"
-                    >FORTNITE <span class="small">COM</span></span
+                  <span class="line">SKATE <span class="small">COM</span></span
                   ><br />
-                  <span class="large">FLAKES POWER</span>
+                  <span class="large">SANDRO DIAS</span>
                 </h3>
               </div>
-            </slide>
-            <slide :index="2">
+            </slide3d>
+            <slide3d :index="2">
               <div class="card rafael-goberna">
                 <h3 class="card-title">
                   <span class="line"
@@ -72,7 +71,27 @@
                   <span class="large">RAFAEL GOBERNA</span>
                 </h3>
               </div>
-            </slide>
+            </slide3d>
+            <slide3d :index="3">
+              <div class="card pelezinho">
+                <h3 class="card-title">
+                  <span class="line"
+                    >AULA DE DANÇA <span class="small">COM</span></span
+                  ><br />
+                  <span class="large">B-BOY PELEZINHO</span>
+                </h3>
+              </div>
+            </slide3d>
+            <slide3d :index="4">
+              <div class="card flakes-power">
+                <h3 class="card-title">
+                  <span class="line"
+                    >FORTNITE <span class="small">COM</span></span
+                  ><br />
+                  <span class="large">FLAKES POWER</span>
+                </h3>
+              </div>
+            </slide3d>
           </carousel-3d>
           <div class="bullets">
             <button
@@ -86,6 +105,14 @@
             <button
               v-on:click="goToSlide(2)"
               :class="carousel.index === 2 ? 'active' : ''"
+            ></button>
+            <button
+              v-on:click="goToSlide(3)"
+              :class="carousel.index === 3 ? 'active' : ''"
+            ></button>
+            <button
+              v-on:click="goToSlide(4)"
+              :class="carousel.index === 4 ? 'active' : ''"
             ></button>
           </div>
         </div>
@@ -107,9 +134,7 @@
               <div v-show="quiz.step === 0">
                 <figure class="quiz-content-header">
                   <img
-                    :src="
-                      require('@/assets/images/quiz/header/lucas-chumbo.png')
-                    "
+                    src="https://web02137.microsites02.redbull.com/summer/images/quiz/header/lucas-chumbo.png"
                     alt="Lucas Chumbo"
                   />
                 </figure>
@@ -177,9 +202,7 @@
               <div v-show="quiz.step === 1">
                 <figure class="quiz-content-header">
                   <img
-                    :src="
-                      require('@/assets/images/quiz/header/sandro-dias.png')
-                    "
+                    src="https://web02137.microsites02.redbull.com/summer/images/quiz/header/sandro-dias.png"
                     alt="Sandro Dias"
                   />
                 </figure>
@@ -247,9 +270,7 @@
               <div v-show="quiz.step === 2">
                 <figure class="quiz-content-header">
                   <img
-                    :src="
-                      require('@/assets/images/quiz/header/rafael-goberna.png')
-                    "
+                    src="https://web02137.microsites02.redbull.com/summer/images/quiz/header/rafael-goberna.png"
                     alt="Rafael Goberna"
                   />
                 </figure>
@@ -317,7 +338,7 @@
               <div v-show="quiz.step === 3">
                 <figure class="quiz-content-header">
                   <img
-                    :src="require('@/assets/images/quiz/header/pelezinho.png')"
+                    src="https://web02137.microsites02.redbull.com/summer/images/quiz/header/pelezinho.png"
                     alt="Pelézinho"
                   />
                 </figure>
@@ -386,9 +407,7 @@
               <div v-show="quiz.step === 4">
                 <figure class="quiz-content-header">
                   <img
-                    :src="
-                      require('@/assets/images/quiz/header/flakes-power.png')
-                    "
+                    src="https://web02137.microsites02.redbull.com/summer/images/quiz/header/flakes-power.png"
                     alt="Flakes Power"
                   />
                 </figure>
@@ -462,100 +481,205 @@
                 </button>
               </div>
             </div>
-            <div v-show="quiz.done && quiz.select" class="quiz-content quiz-person">
+            <div
+              v-show="quiz.done && quiz.select"
+              class="quiz-content quiz-person"
+            >
               <div v-show="quiz.experience === 0" class="lucas-chumbo">
                 <div class="quiz-content-header">
-                  <h3>Esta experiência inesquecível <br>espera por você.</h3>
+                  <h3>Esta experiência inesquecível <br />espera por você.</h3>
                 </div>
                 <div class="quiz-content-body">
-                    <div class="quiz-content-text">
-                      <h4>
-                        <span class="line">SURF <span class="small">COM</span></span><br>
-                        <span class="large">LUCAS CHUMBO</span>
-                      </h4>
-                    </div>
-                    <div class="quiz-content-action">
-                      <button class="btn pink-1">Trocar experiência</button>
-                      <button v-on:click="choose('questSection', 'Lucas Chumbo')" class="btn yellow-2">Topo!</button>
-                    </div>
+                  <div class="quiz-content-text">
+                    <h4>
+                      <span class="line"
+                        >SURF <span class="small">COM</span></span
+                      ><br />
+                      <span class="large">LUCAS CHUMBO</span>
+                    </h4>
+                  </div>
+                  <div class="quiz-content-action">
+                    <button v-on:click="openSelect()" class="btn pink-1">
+                      Trocar experiência
+                    </button>
+                    <button
+                      v-on:click="choose('questSection', 'Lucas Chumbo')"
+                      class="btn yellow-2"
+                    >
+                      Topo!
+                    </button>
+                  </div>
                 </div>
               </div>
               <div v-show="quiz.experience === 1" class="sandro-dias">
                 <div class="quiz-content-header">
-                  <h3>Esta experiência inesquecível <br>espera por você.</h3>
+                  <h3>Esta experiência inesquecível <br />espera por você.</h3>
                 </div>
                 <div class="quiz-content-body">
-                    <div class="quiz-content-text">
-                      <h4>
-                        <span class="line">SKATE <span class="small">COM</span></span><br>
-                        <span class="large">SANDRO DIAS</span>
-                      </h4>
-                    </div>
-                    <div class="quiz-content-action">
-                      <button class="btn pink-1">Trocar experiência</button>
-                      <button v-on:click="choose('questSection', 'Sandro Dias')" class="btn yellow-2">Topo!</button>
-                    </div>
+                  <div class="quiz-content-text">
+                    <h4>
+                      <span class="line"
+                        >SKATE <span class="small">COM</span></span
+                      ><br />
+                      <span class="large">SANDRO DIAS</span>
+                    </h4>
+                  </div>
+                  <div class="quiz-content-action">
+                    <button v-on:click="openSelect()" class="btn pink-1">
+                      Trocar experiência
+                    </button>
+                    <button
+                      v-on:click="choose('questSection', 'Sandro Dias')"
+                      class="btn yellow-2"
+                    >
+                      Topo!
+                    </button>
+                  </div>
                 </div>
               </div>
               <div v-show="quiz.experience === 2" class="rafael-goberna">
                 <div class="quiz-content-header">
-                  <h3>Esta experiência inesquecível <br>espera por você.</h3>
+                  <h3>Esta experiência inesquecível <br />espera por você.</h3>
                 </div>
                 <div class="quiz-content-body">
-                    <div class="quiz-content-text">
-                      <h4>
-                        <span class="line">PARAGLINDER <span class="small">COM</span></span><br>
-                        <span class="large">RAFAEL GOBERNA</span>
-                      </h4>
-                    </div>
-                    <div class="quiz-content-action">
-                      <button class="btn pink-1">Trocar experiência</button>
-                      <button v-on:click="choose('questSection', 'Rafael Goberna')" class="btn yellow-2">Topo!</button>
-                    </div>
+                  <div class="quiz-content-text">
+                    <h4>
+                      <span class="line"
+                        >PARAGLINDER <span class="small">COM</span></span
+                      ><br />
+                      <span class="large">RAFAEL GOBERNA</span>
+                    </h4>
+                  </div>
+                  <div class="quiz-content-action">
+                    <button v-on:click="openSelect()" class="btn pink-1">
+                      Trocar experiência
+                    </button>
+                    <button
+                      v-on:click="choose('questSection', 'Rafael Goberna')"
+                      class="btn yellow-2"
+                    >
+                      Topo!
+                    </button>
+                  </div>
                 </div>
               </div>
               <div v-show="quiz.experience === 3" class="pelezinho">
                 <div class="quiz-content-header">
-                  <h3>Esta experiência inesquecível <br>espera por você.</h3>
+                  <h3>Esta experiência inesquecível <br />espera por você.</h3>
                 </div>
                 <div class="quiz-content-body">
-                    <div class="quiz-content-text">
-                      <h4>
-                        <span class="line">AULA DE DANÇA <span class="small">COM</span></span><br>
-                        <span class="large">B-BOY PELEZINHO</span>
-                      </h4>
-                    </div>
-                    <div class="quiz-content-action">
-                      <button class="btn pink-1">Trocar experiência</button>
-                      <button v-on:click="choose('questSection', 'Pelezinho')" class="btn yellow-2">Topo!</button>
-                    </div>
+                  <div class="quiz-content-text">
+                    <h4>
+                      <span class="line"
+                        >AULA DE DANÇA <span class="small">COM</span></span
+                      ><br />
+                      <span class="large">B-BOY PELEZINHO</span>
+                    </h4>
+                  </div>
+                  <div class="quiz-content-action">
+                    <button v-on:click="openSelect()" class="btn pink-1">
+                      Trocar experiência
+                    </button>
+                    <button
+                      v-on:click="choose('questSection', 'Pelezinho')"
+                      class="btn yellow-2"
+                    >
+                      Topo!
+                    </button>
+                  </div>
                 </div>
               </div>
               <div v-show="quiz.experience === 4" class="flakes-power">
                 <div class="quiz-content-header">
-                  <h3>Esta experiência inesquecível <br>espera por você.</h3>
+                  <h3>Esta experiência inesquecível <br />espera por você.</h3>
                 </div>
                 <div class="quiz-content-body">
-                    <div class="quiz-content-text">
-                      <h4>
-                        <span class="line">FORTNITE <span class="small">COM</span></span><br>
-                        <span class="large">FLAKES POWER</span>
-                      </h4>
-                    </div>
-                    <div class="quiz-content-action">
-                      <button class="btn pink-1">Trocar experiência</button>
-                      <button v-on:click="choose('questSection', 'Flakes Power')" class="btn yellow-2">Topo!</button>
-                    </div>
+                  <div class="quiz-content-text">
+                    <h4>
+                      <span class="line"
+                        >FORTNITE <span class="small">COM</span></span
+                      ><br />
+                      <span class="large">FLAKES POWER</span>
+                    </h4>
+                  </div>
+                  <div class="quiz-content-action">
+                    <button v-on:click="openSelect()" class="btn pink-1">
+                      Trocar experiência
+                    </button>
+                    <button
+                      v-on:click="choose('questSection', 'Flakes Power')"
+                      class="btn yellow-2"
+                    >
+                      Topo!
+                    </button>
+                  </div>
                 </div>
               </div>
             </div>
-            <div v-show="quiz.done && !quiz.select" class="quiz-content quiz-select">
+            <div
+              v-show="quiz.done && !quiz.select"
+              class="quiz-content quiz-select"
+            >
               <div class="quiz-content-header">
-                <h3>Qual experiência <br class="only-mobile">você escolhe <br class="only-desktop">pro seu <br class="only-mobile">verão ser inesquecível?</h3>
+                <h3>
+                  Qual experiência <br class="only-mobile" />você escolhe
+                  <br class="only-desktop" />pro seu
+                  <br class="only-mobile" />verão ser inesquecível?
+                </h3>
+              </div>
+              <div class="quiz-content-body">
+                <ul>
+                  <li>
+                    <button
+                      v-on:click="changeExp(0)"
+                      :class="quiz.experience === 0 ? 'selected' : null"
+                    >
+                      Surf com o Lucas Chumbo
+                    </button>
+                  </li>
+                  <li>
+                    <button
+                      v-on:click="changeExp(1)"
+                      :class="quiz.experience === 1 ? 'selected' : null"
+                    >
+                      Skate com Sandro Dias
+                    </button>
+                  </li>
+                  <li>
+                    <button
+                      v-on:click="changeExp(2)"
+                      :class="quiz.experience === 2 ? 'selected' : null"
+                    >
+                      Paraglider com Rafael Goberna
+                    </button>
+                  </li>
+                  <li>
+                    <button
+                      v-on:click="changeExp(3)"
+                      :class="quiz.experience === 3 ? 'selected' : null"
+                    >
+                      Aula de dança com o B-Boy Pelezinho
+                    </button>
+                  </li>
+                  <li>
+                    <button
+                      v-on:click="changeExp(4)"
+                      :class="quiz.experience === 4 ? 'selected' : null"
+                    >
+                      Fortnite com o Flakes Power
+                    </button>
+                  </li>
+                </ul>
+              </div>
+              <div class="quiz-content-action">
+                <button v-on:click="finishExp" class="btn yellow-1">
+                  Pronto
+                </button>
               </div>
             </div>
           </div>
         </div>
+        <div class="arrow"></div>
       </div>
     </section>
     <section ref="questSection">
@@ -657,12 +781,12 @@
                 </div>
               </div>
               <input
-                    style="display:none;"
-                    type="text"
-                    name="experience"
-                    id="experience"
-                    v-model="questForm.experience.val"
-                  />
+                style="display: none"
+                type="text"
+                name="experience"
+                id="experience"
+                v-model="questForm.experience.val"
+              />
             </div>
             <div class="form-terms">
               <p>
@@ -698,6 +822,117 @@
         <div class="arrow"></div>
       </div>
     </section>
+    <section>
+      <div class="videos">
+        <h4 class="sub-title">
+          VOCÊ CORRE O RISCO DE VIVER <br class="only-mobile" />UMA EXPERIÊNCIA
+          EXCLUSIVA <br />COM UM DOS ATLETAS <br class="only-mobile" />MAIS
+          INSANOS DO MUNDO. <br />
+          <span
+            >É BOM TER ASSUNTO COM ELE. <br class="only-mobile" />DÁ O PLAY E SE
+            LIGA.</span
+          >
+        </h4>
+        <div class="video-track">
+          <div class="video-container">
+            <VueSlickCarousel v-bind="settings">
+              <div>
+                <div v-on:click="playVideo(1)" class="video-thumb sandro-dias">
+                  <div class="video-info">
+                    <h6 class="video-title">Skate na Estaiada</h6>
+                    <span class="video-persona">Sandro Dias</span>
+                    <div class="video-desc">
+                      <span class="video-type">Skate</span>
+                      <span class="video-time">5 min</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <div v-on:click="playVideo(4)" class="video-thumb flakes-power">
+                  <div class="video-info">
+                    <h6 class="video-title">Fortnite em ação</h6>
+                    <span class="video-persona">Flakes Power</span>
+                    <div class="video-desc">
+                      <span class="video-type">Gaming</span>
+                      <span class="video-time">5 min</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <div
+                  v-on:click="playVideo(2)"
+                  class="video-thumb rafael-goberna"
+                >
+                  <div class="video-info">
+                    <h6 class="video-title">Paraglinder Goberna</h6>
+                    <span class="video-persona">Rafael Goberna</span>
+                    <div class="video-desc">
+                      <span class="video-type">Paraglinder</span>
+                      <span class="video-time">5 min</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <div v-on:click="playVideo(3)" class="video-thumb pelezinho">
+                  <div class="video-info">
+                    <h6 class="video-title">Dançando com Pelezinho</h6>
+                    <span class="video-persona">B-Boy Pelezinho</span>
+                    <div class="video-desc">
+                      <span class="video-type">Dance</span>
+                      <span class="video-time">5 min</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <div v-on:click="playVideo(0)" class="video-thumb lucas-chumbo">
+                  <div class="video-info">
+                    <h6 class="video-title">Ondas de Nazaré</h6>
+                    <span class="video-persona">Lucas Chumbo</span>
+                    <div class="video-desc">
+                      <span class="video-type">Surf</span>
+                      <span class="video-time">5 min</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </VueSlickCarousel>
+          </div>
+        </div>
+        <div class="instagram">
+          <div class="instagram-text">
+            <h4 class="sub-title">
+              JÁ COMECE A CURTIR <br class="only-desktop">O CLIMA DO VERÃO <br><span>COM ESSE GAME</span> <br class="only-desktop"><span>NO INSTAGRAM.</span>
+            </h4>
+          </div>
+          <div class="instagram-video"></div>
+          <div class="instagram-button">
+            <a href="#" target="_blank" class="btn pink-2">Experimentar</a>
+          </div>
+        </div>
+        <div class="arrow"></div>
+      </div>
+    </section>
+    <div v-show="videos.play" class="video-modal">
+      <button v-on:click="closeVideo" class="video-modal-close"></button>
+      <div class="video-box">
+        <div class="video-iframe">
+          <iframe
+            frameborder="0"
+            scrolling="no"
+            marginheight="0"
+            marginwidth="0"
+            :src="videos.selected"
+            allowfullscreen
+            webkitallowfullscreen
+            mozallowfullscreen
+          ></iframe>
+        </div>
+      </div>
+    </div>
   </main>
 </template>
 

@@ -5,7 +5,7 @@ html {
 main {
     overflow: hidden;
     background-color: $c-blue-1;
-    background-image: url("../images/watermelon-hero-mobile.jpg");
+    background-image: url("https://web02137.microsites02.redbull.com/summer/images/template/watermelon-hero-mobile.jpg");
     background-position: top center;
     background-repeat: no-repeat;
     background-size: 1148px;
@@ -15,7 +15,7 @@ main {
     }
 
     @media #{$mq-lg} {
-        background-image: url("../images/watermelon-hero-desktop.jpg");
+        background-image: url("https://web02137.microsites02.redbull.com/summer/images/template/watermelon-hero-desktop.jpg");
         background-position: top center;
         background-size: 1920px;
     }

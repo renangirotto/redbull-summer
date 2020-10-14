@@ -1,9 +1,12 @@
-import { Carousel3d, Slide } from 'vue-carousel-3d';
+import { Carousel3d, Slide as Slide3d } from 'vue-carousel-3d';
+import VueSlickCarousel from 'vue-slick-carousel'
+import 'vue-slick-carousel/dist/vue-slick-carousel.css'
 
 export default {
     components: {
         Carousel3d,
-        Slide
+        Slide3d,
+        VueSlickCarousel
     },
     data() {
         return {
@@ -17,8 +20,8 @@ export default {
             },
             quiz: {
                 step: 0,
-                done: true,
-                select: false,
+                done: false,
+                select: true,
                 quests: [
                     {
                         try: false,
@@ -46,7 +49,7 @@ export default {
                         respose: null
                     }
                 ],
-                experience: 0,
+                experience: null,
             },
             questForm: {
                 message: {
@@ -76,10 +79,60 @@ export default {
                 experience: {
                     val: ''
                 }
+            },
+            settings: {
+                dots: false,
+                arrows: false,
+                infinite: true,
+                speed: 500,
+                centerMode: true,
+                slidesToScroll: 1,
+                responsive: [
+                    {
+                        breakpoint: 439,
+                        settings: {
+                            slidesToShow: 1,
+                        }
+                    },
+                    {
+                        breakpoint: 767,
+                        settings: {
+                            slidesToShow: 3,
+                            slidesToScroll: 1,
+                            centerMode: true,
+                        }
+                    },
+                    {
+                        breakpoint: 1920,
+                        settings: "unslick"
+                    }
+                ]
+            },
+            videos: {
+                play: false,
+                selected: null,
+                urls: [
+                    {
+                        url: "https://www.redbull.com/embed/rrn:content:videos:1fe7ccb3-e8cb-44fb-bef5-c98c559e9573:pt-BR"
+                    },
+                    {
+                        url: "https://www.redbull.com/embed/rrn:content:videos:1fe7ccb3-e8cb-44fb-bef5-c98c559e9573:pt-BR"
+                    },
+                    {
+                        url: "https://www.redbull.com/embed/rrn:content:videos:1331c4db-e19d-453b-90b1-166a67c3cb0e:pt-BR"
+                    },
+                    {
+                        url: "https://www.redbull.com/embed/rrn:content:videos:04f4a34f-5614-4d1e-b44f-ea5c599921f5:pt-BR"
+                    },
+                    {
+                        url: "https://www.redbull.com/embed/rrn:content:videos:1fe7ccb3-e8cb-44fb-bef5-c98c559e9573:pt-BR"
+                    },
+                ]
             }
         }
     },
     mounted() {
+        // Experiences carrousel
         // There isn't a responsive support in the carousel-3d library
         // This will check the viewport size and will set the styles
         if (this.windowWidth < 768) {
@@ -200,8 +253,20 @@ export default {
                 this.quiz.experience = ((Math.floor(Math.random() * 5) + 1) - 1)
             }
         },
+        // Change experience selected in the list
         changeExp(expNumber) {
             this.quiz.experience = expNumber
+        },
+        // Open select
+        openSelect() {
+            this.quiz.select = false
+            this.quiz.experience = null
+        },
+        // Back to experience decision
+        finishExp() {
+            if (this.quiz.experience != null) {
+                this.quiz.select = true
+            }
         },
         // "Anchor" click because redbull could use hash in router
         choose(refName, expName) {
@@ -211,6 +276,24 @@ export default {
             let element = this.$refs[refName];
             let top = element.offsetTop;
             window.scrollTo(0, top);
+        },
+        // Open video modal selecting the video url
+        playVideo(urlRef) {
+            // Select based on the persona
+            this.videos.selected = this.videos.urls[urlRef].url
+            // Open modal
+            this.videos.play = true
+            // Hide body scroll
+            document.getElementsByTagName("BODY")[0].style.overflowY = "hidden"
+        },
+        // Close video
+        closeVideo() {
+            // Select based on the persona
+            this.videos.selected = null
+            // Open modal
+            this.videos.play = false
+            // Hide body scroll
+            document.getElementsByTagName("BODY")[0].style.overflowY = "auto"
         }
     },
 }

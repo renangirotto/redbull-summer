@@ -137,4 +137,18 @@ body {
     span {
         color: $c-yellow-1;
     }
+
+    .only-mobile {
+        @media #{$mq-md} {
+            display: none;
+        }
+    }
+
+    .only-desktop {
+        display: none;
+
+        @media #{$mq-md} {
+            display: initial;
+        }
+    }
 }

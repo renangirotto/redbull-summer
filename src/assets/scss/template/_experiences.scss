@@ -93,15 +93,15 @@
             }
 
             &.lucas-chumbo {
-                background-image: url("../images/experience/lucas-chumbo.png");
+                background-image: url("https://web02137.microsites02.redbull.com/summer/images/experience/lucas-chumbo.png");
             }
 
-            &.flakes-power {
-                background-image: url("../images/experience/flakes-power.png");
+            &.sandro-dias {
+                background-image: url("https://web02137.microsites02.redbull.com/summer/images/experience/sandro-dias.png");
             }
 
             &.rafael-goberna {
-                background-image: url("../images/experience/rafael-goberna.png");
+                background-image: url("https://web02137.microsites02.redbull.com/summer/images/experience/rafael-goberna.png");
 
                 .card-title {
                     @media #{$mq-md} {
@@ -125,6 +125,40 @@
                     }
                 }
             }
+
+            &.pelezinho {
+                background-image: url("https://web02137.microsites02.redbull.com/summer/images/experience/pelezinho.png");
+
+                .card-title {
+                    font-size: 28.28px;
+
+                    @media #{$mq-md} {
+                        font-size: 64.46px;
+                    }
+
+                    .line {
+                        margin-left: 8px;
+
+                        @media #{$mq-md} {
+                            margin-left: 34px;
+                        }
+                    }
+
+                    .large {
+                        font-size: 32px;
+
+                        @media #{$mq-md} {
+                            font-size: 80.45px;
+                        }
+                    }
+                }
+            }
+
+            &.flakes-power {
+                background-image: url("https://web02137.microsites02.redbull.com/summer/images/experience/flakes-power.png");
+            }
+
+            
         }
 
         // Carousel-3d custom styles

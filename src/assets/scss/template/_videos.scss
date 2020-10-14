@@ -1,0 +1,424 @@
+.videos {
+    padding: 15px 0 25px;
+
+    @media #{$mq-md} {
+        padding: 75px 0;
+    }
+
+    .sub-title {
+        font-size: 16.67px;
+
+        @media #{$mq-md} {
+            font-size: 27.8px;
+        }
+
+        &:not(:last-child) {
+            margin-bottom: 20px;
+
+            @media #{$mq-md} {
+                margin-bottom: 35px;
+            }
+        }
+    }
+
+    .video-track {
+        padding: 0 0 20px;
+        background: rgba(1, 29, 60, 1);
+        background: -moz-linear-gradient(
+            top,
+            rgba(1, 29, 60, 1) 0%,
+            rgba(1, 29, 60, 1) 30%,
+            rgba(255, 44, 62, 1) 30%,
+            rgba(255, 44, 62, 1) 100%
+        );
+        background: -webkit-gradient(
+            left top,
+            left bottom,
+            color-stop(0%, rgba(1, 29, 60, 1)),
+            color-stop(30%, rgba(1, 29, 60, 1)),
+            color-stop(30%, rgba(255, 44, 62, 1)),
+            color-stop(100%, rgba(255, 44, 62, 1))
+        );
+        background: -webkit-linear-gradient(
+            top,
+            rgba(1, 29, 60, 1) 0%,
+            rgba(1, 29, 60, 1) 30%,
+            rgba(255, 44, 62, 1) 30%,
+            rgba(255, 44, 62, 1) 100%
+        );
+        background: -o-linear-gradient(
+            top,
+            rgba(1, 29, 60, 1) 0%,
+            rgba(1, 29, 60, 1) 30%,
+            rgba(255, 44, 62, 1) 30%,
+            rgba(255, 44, 62, 1) 100%
+        );
+        background: -ms-linear-gradient(
+            top,
+            rgba(1, 29, 60, 1) 0%,
+            rgba(1, 29, 60, 1) 30%,
+            rgba(255, 44, 62, 1) 30%,
+            rgba(255, 44, 62, 1) 100%
+        );
+        background: linear-gradient(
+            to bottom,
+            rgba(1, 29, 60, 1) 0%,
+            rgba(1, 29, 60, 1) 30%,
+            rgba(255, 44, 62, 1) 30%,
+            rgba(255, 44, 62, 1) 100%
+        );
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#011d3c', endColorstr='#ff2c3e', GradientType=0 );
+
+        @media #{$mq-md} {
+            padding: 0 20px 22px;
+        }
+
+        &:not(:last-child) {
+            margin-bottom: 32px;
+        }
+    }
+
+    .video-container {
+        width: 100%;
+        margin: 0 auto;
+
+        .slider {
+            @media #{$mq-md} {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            > div {
+                @media #{$mq-md} {
+                    width: 100%;
+                    max-width: 218px;
+                }
+
+                &:not(:last-child) {
+                    margin-right: 12px;
+
+                    @media #{$mq-md} {
+                        margin-right: 16px;
+                    }
+                }
+            }
+        }
+    }
+
+    .video-thumb {
+        box-sizing: border-box;
+        display: flex;
+        align-items: flex-end;
+        width: calc(100% - 12px);
+        height: 238px;
+        padding: 12px;
+        border-radius: 10px;
+        position: relative;
+        margin: 0 auto;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        overflow: hidden;
+        cursor: pointer;
+        transition: background-size 0.5s ease-in-out;
+
+        @media #{$mq-md} {
+            width: 100%;
+            max-width: 218px;
+            height: 288px;
+            padding: 12px 14px;
+        }
+
+        &:hover {
+            background-size: cover;
+        }
+
+        &::before {
+            content: "";
+            display: block;
+            width: 34px;
+            height: 34px;
+            border-radius: 50%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-top: -17px;
+            margin-left: -17px;
+            background-color: rgba(0, 0, 0, 0.5);
+
+            @media #{$mq-md} {
+                width: 40px;
+                height: 40px;
+                margin-top: -20px;
+                margin-left: -20px;
+            }
+        }
+
+        &::after {
+            content: "";
+            display: block;
+            width: 0;
+            height: 0;
+            border-top: 7px solid transparent;
+            border-bottom: 7px solid transparent;
+            border-left: 12px solid $c-white;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-top: -7px;
+            margin-left: -4px;
+
+            @media #{$mq-md} {
+                border-top: 8px solid transparent;
+                border-bottom: 8px solid transparent;
+                border-left: 14px solid $c-white;
+                margin-top: -8px;
+                margin-left: -5px;
+            }
+        }
+
+        .video-info {
+            width: 100%;
+            font-family: Helvetica, sans-serif;
+            font-weight: 500;
+            line-height: 0.9;
+            color: $c-white;
+
+            .video-title {
+                font-weight: 700;
+                font-size: 12.39px;
+
+                @media #{$mq-md} {
+                    font-size: 14.9px;
+                }
+
+                &:not(:last-child) {
+                    margin-bottom: 8px;
+                }
+            }
+
+            .video-persona {
+                display: inline-block;
+                font-size: 8.67px;
+
+                @media #{$mq-md} {
+                    font-size: 10.43px;
+                }
+
+                &:not(:last-child) {
+                    margin-bottom: 11px;
+
+                    @media #{$mq-md} {
+                        margin-bottom: 16px;
+                    }
+                }
+            }
+
+            .video-desc {
+                display: flex;
+                justify-content: space-between;
+                font-size: 8.67px;
+
+                @media #{$mq-md} {
+                    font-size: 10.43px;
+                }
+            }
+        }
+
+        &.lucas-chumbo {
+            background-image: url("https://web02137.microsites02.redbull.com/summer/images/thumbs/lucas-chumbo.png");
+        }
+
+        &.sandro-dias {
+            background-image: url("https://web02137.microsites02.redbull.com/summer/images/thumbs/sandro-dias.png");
+        }
+
+        &.rafael-goberna {
+            background-image: url("https://web02137.microsites02.redbull.com/summer/images/thumbs/rafael-goberna.png");
+        }
+
+        &.pelezinho {
+            background-image: url("https://web02137.microsites02.redbull.com/summer/images/thumbs/pelezinho.png");
+        }
+
+        &.flakes-power {
+            background-image: url("https://web02137.microsites02.redbull.com/summer/images/thumbs/flakes-power.png");
+        }
+    }
+
+    .instagram {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 28px;
+        gap: 13px 0px;
+        grid-template-areas:
+            "text"
+            "video"
+            "button";
+
+        @media #{$mq-md} {
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            gap: 26px 54px;
+            grid-template-areas:
+                "video text"
+                "video button";
+        }
+
+        &:not(:last-child) {
+            margin-bottom: 32px;
+        }
+
+        .instagram-text {
+            grid-area: text;
+            margin-bottom: 7px;
+
+            @media #{$mq-md} {
+                margin-bottom: 0;
+            }
+
+            .sub-title {
+                font-size: 16.67px;
+
+                @media #{$mq-md} {
+                    font-size: 30.48px;
+                    text-align: left;
+                }
+            }
+        }
+
+        .instagram-video {
+            grid-area: video;
+        }
+
+        .instagram-button {
+            grid-area: button;
+            text-align: center;
+
+            @media #{$mq-md} {
+                text-align: left;
+            }
+        }
+    }
+
+    .arrow {
+        position: relative;
+        width: 16px;
+        height: 13px;
+        margin: 28px auto 0;
+
+        @media #{$mq-md} {
+            width: 32px;
+            height: 18px;
+            margin-top: 49px;
+        }
+
+        &::before,
+        &::after {
+            content: "";
+            display: block;
+            width: 10px;
+            height: 2px;
+            border-radius: 4px;
+            position: absolute;
+            top: 6px;
+            background-color: $c-white;
+
+            @media #{$mq-md} {
+                width: 20px;
+                height: 4px;
+            }
+        }
+
+        &::before {
+            left: 0;
+            transform: rotate(45deg);
+        }
+
+        &::after {
+            right: 0;
+            transform: rotate(-45deg);
+        }
+    }
+}
+
+.video-modal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 999;
+    background-color: rgba(0, 0, 0, 0.9);
+
+    .video-modal-close {
+        width: 40px;
+        height: 40px;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        border: 2px solid $c-white;
+        border-radius: 50%;
+
+        &::before,
+        &::after {
+            content: "";
+            display: block;
+            width: 70%;
+            height: 2px;
+            position: absolute;
+            top: 50%;
+            margin-top: -1px;
+            left: 16%;
+            background-color: $c-white;
+        }
+
+        &::before {
+            transform: rotate(45deg);
+        }
+
+        &::after {
+            transform: rotate(-45deg);
+        }
+    }
+
+    .video-box {
+        width: 100%;
+        max-width: 1024px;
+        padding: 4px;
+        background-color: $c-blue-1;
+
+        @media #{$mq-md} {
+            padding: 8px;
+        }
+    }
+
+    .video-iframe {
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+        max-width: 1024px;
+        max-height: 576px;
+        padding-top: 56.25%;
+
+        @media #{$mq-lg} {
+            padding: 0;
+            height: 576px;
+        }
+    }
+
+    iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+    }
+}
