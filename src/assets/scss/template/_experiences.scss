@@ -1,4 +1,5 @@
 .experiences {
+    position: relative;
     padding: 0 0 15px;
 
     @media #{$mq-md} {
@@ -17,7 +18,9 @@
 
     .experience-carousel {
         max-width: 1080px;
+        position: relative;
         margin: 0 auto;
+        z-index: $z-lvl-1;
 
         &:not(:last-child) {
             margin-bottom: 27px;
@@ -294,6 +297,9 @@
     }
 
     .experiences-anchor {
+        position: relative;
+        z-index: $z-lvl-1;
+
         .sub-title {
             font-size: 16.67px;
 

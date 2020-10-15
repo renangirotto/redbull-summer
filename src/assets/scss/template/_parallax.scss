@@ -20,3 +20,216 @@
 //         width: 100%;
 //     }
 // }
+
+// Container
+.parallax {
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    transition: top 0.5s ease-in-out, right 0.5s ease-in-out, left 0.5s ease-in-out;
+
+    img {
+        display: block;
+        width: 100%;
+    }
+
+    // Watermolons
+    &.watermelon-1 {
+        width: 252px;
+        height: 280px;
+        top: 656px;
+        left: calc(100% - 88px);
+        background-image: url("https://web02137.microsites02.redbull.com/summer/images/template/watermelon-1.png");
+
+        @media #{$mq-sm} {
+            left: calc(100% - 148px);
+        }
+
+        @media #{$mq-md} {
+            top: 624px;
+            left: calc(100% - 220px);
+        }
+
+        @media #{$mq-lg} {
+            width: 443px;
+            height: 492px;
+            top: 670px;
+            left: calc(100% - 220px);
+        }
+
+        @media #{$mq-xl} {
+            left: calc(100% - 280px);
+        }
+
+        @media #{$mq-xxl} {
+            left: calc(100% - 443px - 48px);
+        }
+    }
+
+    &.watermelon-2 {
+        width: 178px;
+        height: 244px;
+        top: 810px;
+        right: calc(100% - 44px);
+
+        @media #{$mq-sm} {
+            top: 890px;
+            right: calc(100% - 88px);
+        }
+
+        @media #{$mq-md} {
+            width: 210px;
+            top: 770px;
+            right: calc(100% - 140px);
+        }
+
+        @media #{$mq-lg} {
+            width: 528px;
+            height: 617px;
+            top: 999px;
+            right: calc(100% - 150px);
+        }
+
+        @media #{$mq-xl} {
+            right: calc(100% - 200px);
+        }
+
+        @media #{$mq-xxl} {
+            right: calc(100% - 392px);
+        }
+
+        &::after {
+            content: "";
+            display: block;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            background-image: url("https://web02137.microsites02.redbull.com/summer/images/template/watermelon-2.png");
+            transform: rotate(38deg);
+            transition: transform 0.5s ease-in-out;
+
+            @media #{$mq-sm} {
+                transform: rotate(0deg);
+            }
+        }
+    }
+
+    &.watermelon-3 {
+        width: 270px;
+        height: 265px;
+        top: 466px;
+        right: calc(100% - 120px);
+        background-image: url("https://web02137.microsites02.redbull.com/summer/images/template/watermelon-3.png");
+
+        @media #{$mq-sm} {
+            top: 516px;
+            right: calc(100% - 148px);
+        }
+
+        @media #{$mq-md} {
+            width: 340px;
+            height: 377px;
+            top: 760px;
+            right: calc(100% - 220px);
+        }
+
+        @media #{$mq-lg} {
+            width: 443px;
+            height: 492px;
+            top: 820px;
+            right: calc(100% - 240px);
+            z-index: $z-lvl-2;
+        }
+
+        @media #{$mq-xl} {
+            width: 558px;
+            height: 621px;
+            right: calc(100% - 320px);
+        }
+
+        @media #{$mq-xxl} {
+            right: calc(100% - 430px);
+        }
+
+        @media screen and (min-width: 1600px) {
+            right: calc(100% - 516px);
+        }
+
+        @media screen and (min-width: 1920px) {
+            right: calc(100% - 558px - 110px);
+        }
+    }
+
+    // Cans
+    &.can-1 {
+        width: 280px;
+        height: 546px;
+        top: 190px;
+        left: 100%;
+        background-image: url("https://web02137.microsites02.redbull.com/summer/images/template/can-1.png");
+        opacity: 0;
+
+        @media #{$mq-md} {
+            left: calc(100% - 190px);
+            opacity: 1;
+        }
+
+        @media #{$mq-lg} {
+            width: 350px;
+            height: 682px;
+            top: 255px;
+            left: calc(100% - 260px);
+        }
+
+        @media #{$mq-xl} {
+            width: 563px;
+            height: 1097px;
+            top: 225px;
+            left: calc(100% - 460px);
+        }
+
+        @media #{$mq-xxl} {
+            left: calc(100% - 530px);
+        }
+
+        @media screen and (min-width: 1600px) {
+            left: calc(100% - 563px - 68px);
+        }
+    }
+
+    &.can-2 {
+        width: 304px;
+        height: 546px;
+        top: 690px;
+        right: 100%;
+        background-image: url("https://web02137.microsites02.redbull.com/summer/images/template/can-2.png");
+        opacity: 0;
+
+        @media #{$mq-md} {
+            right: calc(100% - 250px);
+            opacity: 1;
+        }
+
+        @media #{$mq-lg} {
+            width: 380px;
+            height: 682px;
+            top: 700px;
+            right: calc(100% - 330px);
+        }
+
+        @media #{$mq-xl} {
+            width: 534px;
+            height: 957px;
+            top: 470px;
+            right: calc(100% - 460px);
+        }
+
+        @media #{$mq-xxl} {
+            right: calc(100% - 534px - 84px);
+        }
+    }
+}

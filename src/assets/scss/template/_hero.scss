@@ -41,7 +41,9 @@
     }
 
     .hero-text {
+        position: relative;
         margin-top: -41px;
+        z-index: $z-lvl-1;
 
         @media #{$mq-md} {
             margin-top: 0;
@@ -145,7 +147,7 @@
             width: 32px;
             height: 18px;
             margin: 18px auto 0;
-        
+
             &::before,
             &::after {
                 content: "";
@@ -157,12 +159,12 @@
                 top: 6px;
                 background-color: $c-white;
             }
-        
+
             &::before {
                 left: 0;
                 transform: rotate(45deg);
             }
-        
+
             &::after {
                 right: 0;
                 transform: rotate(-45deg);

@@ -123,6 +123,7 @@
           </h4>
           <div class="arrow"></div>
         </div>
+        <div v-rellax="{speed: 2.2}" class="parallax can-1"></div>
       </div>
     </section>
     <section>
@@ -820,6 +821,7 @@
           </div>
         </form>
         <div class="arrow"></div>
+        <div v-rellax="{speed: 2.2}" class="parallax can-2"></div>
       </div>
     </section>
     <section>
@@ -843,7 +845,7 @@
                     <span class="video-persona">Sandro Dias</span>
                     <div class="video-desc">
                       <span class="video-type">Skate</span>
-                      <span class="video-time">5 min</span>
+                      <span class="video-time">4 min</span>
                     </div>
                   </div>
                 </div>
@@ -870,7 +872,7 @@
                     <span class="video-persona">Rafael Goberna</span>
                     <div class="video-desc">
                       <span class="video-type">Paraglinder</span>
-                      <span class="video-time">5 min</span>
+                      <span class="video-time">2 min</span>
                     </div>
                   </div>
                 </div>
@@ -905,7 +907,10 @@
         <div class="instagram">
           <div class="instagram-text">
             <h4 class="sub-title">
-              JÁ COMECE A CURTIR <br class="only-desktop">O CLIMA DO VERÃO <br><span>COM ESSE GAME</span> <br class="only-desktop"><span>NO INSTAGRAM.</span>
+              JÁ COMECE A CURTIR <br class="only-desktop" />O CLIMA DO VERÃO
+              <br /><span>COM ESSE GAME</span> <br class="only-desktop" /><span
+                >NO INSTAGRAM.</span
+              >
             </h4>
           </div>
           <div class="instagram-video"></div>

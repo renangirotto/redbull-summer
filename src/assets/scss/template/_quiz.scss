@@ -1,5 +1,6 @@
 .quiz {
     padding: 15px 0 15px;
+    position: relative;
 
     @media #{$mq-md} {
         padding: 75px 0;
@@ -16,6 +17,8 @@
     }
 
     .container {
+        position: relative;
+        z-index: $z-lvl-1;
         max-width: 360px;
         padding: 0 20px;
         margin: 0 auto;
@@ -38,9 +41,9 @@
         border-radius: 30px;
         background-color: $c-pink-2;
         overflow: hidden;
-        -webkit-box-shadow: 0px 50px 100px 0px rgba(20, 49, 88, 1);
-        -moz-box-shadow: 0px 50px 100px 0px rgba(20, 49, 88, 1);
-        box-shadow: 0px 50px 100px 0px rgba(20, 49, 88, 1);
+        -webkit-box-shadow: 0px 50px 150px 0px rgba(20, 49, 88, 0.8);
+        -moz-box-shadow: 0px 50px 150px 0px rgba(20, 49, 88, 0.8);
+        box-shadow: 0px 50px 150px 0px rgba(20, 49, 88, 0.8);
     }
 
     .quiz-content {

@@ -10,6 +10,7 @@ export default {
     },
     data() {
         return {
+            cdn: 'https://web02137.microsites02.redbull.com',
             windowWidth: window.innerWidth,
             carousel: {
                 width: '',
@@ -103,7 +104,7 @@ export default {
                         }
                     },
                     {
-                        breakpoint: 1920,
+                        breakpoint: 10000,
                         settings: "unslick"
                     }
                 ]
