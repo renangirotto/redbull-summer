@@ -166,15 +166,37 @@
 
         // Carousel-3d custom styles
         .carousel-3d-container {
+            height: 221px!important;
             margin-top: 0;
             margin-bottom: 0;
             overflow: visible;
 
+            @media #{$mq-md} {
+                height: 540px!important;
+            }
+
+            .carousel-3d-slider {
+                width: 285px!important;
+                height: 221px!important;
+
+                @media #{$mq-md} {
+                    width: 695px!important;
+                    height: 540px!important;
+                }
+            }
+
             .carousel-3d-slide {
+                width: 285px!important;
+                height: 221px!important;
                 border: 0;
                 background-color: transparent;
                 transition: transform 500ms ease 0s, opacity 500ms ease 0s !important;
                 overflow: visible;
+
+                @media #{$mq-md} {
+                    width: 695px!important;
+                    height: 540px!important;
+                }
 
                 &:not(.current) {
                     opacity: 0.8 !important;

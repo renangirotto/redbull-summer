@@ -821,7 +821,7 @@
           </div>
         </form>
         <div class="arrow"></div>
-        <div v-rellax="{speed: 2.2}" class="parallax can-2"></div>
+        <div v-rellax="{speed: 2.4}" class="parallax can-2"></div>
       </div>
     </section>
     <section>
@@ -851,16 +851,22 @@
                 </div>
               </div>
               <div>
-                <div v-on:click="playVideo(4)" class="video-thumb flakes-power">
+                <a
+                  href="https://www.redbull.com/br-pt/games-flakes-power-fortnite-temporada-3"
+                  target="_blank"
+                  class="video-thumb article flakes-power"
+                >
                   <div class="video-info">
-                    <h6 class="video-title">Fortnite em ação</h6>
+                    <h6 class="video-title">
+                      Flakes Power conta o melhor da Temporada 3 do Fortnite
+                    </h6>
                     <span class="video-persona">Flakes Power</span>
                     <div class="video-desc">
                       <span class="video-type">Gaming</span>
-                      <span class="video-time">5 min</span>
+                      <span class="video-time">Artigo</span>
                     </div>
                   </div>
-                </div>
+                </a>
               </div>
               <div>
                 <div
@@ -915,7 +921,11 @@
           </div>
           <div class="instagram-video"></div>
           <div class="instagram-button">
-            <a href="#" target="_blank" class="btn pink-2">Experimentar</a>
+            <button v-on:click="checkDevice" class="btn pink-2">Experimentar</button>
+            <div v-show="!isMobile" class="tooltip">
+              Acesse o site pelo celular para <br>
+              aproveitar o filtro de verão!
+              </div>
           </div>
         </div>
         <div class="arrow"></div>

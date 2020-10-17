@@ -116,6 +116,7 @@
         border-radius: 10px;
         position: relative;
         margin: 0 auto;
+        text-decoration: none;
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
@@ -188,6 +189,7 @@
             .video-title {
                 font-weight: 700;
                 font-size: 12.39px;
+                line-height: 1.2;
 
                 @media #{$mq-md} {
                     font-size: 14.9px;
@@ -245,6 +247,13 @@
         &.flakes-power {
             background-image: url("https://web02137.microsites02.redbull.com/summer/images/thumbs/flakes-power.png");
         }
+
+        &.article {
+            &::before,
+            &::after {
+                content: none;
+            }
+        }
     }
 
     .instagram {
@@ -294,10 +303,38 @@
 
         .instagram-button {
             grid-area: button;
+            position: relative;
             text-align: center;
 
             @media #{$mq-md} {
                 text-align: left;
+            }
+
+            .tooltip {
+                display: inline-block;
+                padding: 8px;
+                border-radius: 4px;
+                position: absolute;
+                top: 72px;
+                left: 0;
+                font-family: $f-futura;
+                font-weight: 500;
+                font-size: 16px;
+                line-height: 1.4;
+                text-align: center;
+                color: $c-white;
+                background-color: $c-pink-2;
+
+                &::before {
+                    content: "";
+                    display: block;
+                    position: absolute;
+                    top: -15px;
+                    left: 12%;
+                    border-left: 12px solid transparent;
+                    border-right: 12px solid transparent;
+                    border-bottom: 16px solid $c-pink-2;
+                }
             }
         }
     }
@@ -364,6 +401,7 @@
         right: 20px;
         border: 2px solid $c-white;
         border-radius: 50%;
+        cursor: pointer;
 
         &::before,
         &::after {
