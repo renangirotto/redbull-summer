@@ -65,7 +65,7 @@
                 p {
                     font-family: $f-futura;
                     font-weight: 500;
-                    font-size: 13.12px;
+                    font-size: 12.12px;
                     text-align: center;
                     line-height: 1.143;
                     color: $c-white;
@@ -172,7 +172,9 @@
                     left: 16px;
                     font-family: $f-futura-cond;
                     font-weight: 800;
+                    font-style: italic;
                     font-size: 9.7px;
+                    letter-spacing: -3.5px;
                     color: $c-brown-2;
                     background-color: $c-yellow-1;
 
@@ -181,6 +183,10 @@
                         height: 52px;
                         left: 18px;
                         font-size: 20.15px;
+                    }
+
+                    span {
+                        margin-right: 5px;
                     }
                 }
 
@@ -270,7 +276,7 @@
                             font-size: 34.23px;
 
                             @media #{$mq-md} {
-                                font-size: 84px;
+                                font-size: 80px;
                             }
                         }
                     }
@@ -321,7 +327,7 @@
                                 font-size: 30.23px;
 
                                 @media #{$mq-md} {
-                                    font-size: 78px;
+                                    font-size: 72px;
                                 }
                             }
                         }
@@ -338,7 +344,7 @@
                             font-size: 26px;
 
                             @media #{$mq-md} {
-                                font-size: 69px;
+                                font-size: 60px;
                             }
 
                             .line {
@@ -353,7 +359,7 @@
                                 font-size: 30px;
 
                                 @media #{$mq-md} {
-                                    font-size: 76px;
+                                    font-size: 70px;
                                 }
                             }
                         }
@@ -468,10 +474,14 @@
     }
 
     .arrow {
-        position: relative;
         width: 16px;
         height: 13px;
-        margin: 0 auto;
+        position: relative;
+        top: -6px;
+        margin: 28px auto 0;
+        animation-name: shake;
+        animation-duration: 1.5s;
+        animation-iteration-count: infinite;
 
         @media #{$mq-md} {
             width: 32px;
@@ -503,6 +513,18 @@
         &::after {
             right: 0;
             transform: rotate(-45deg);
+        }
+
+        @keyframes shake {
+            0% {
+                top: -6px;
+            }
+            50% {
+                top: 2px;
+            }
+            100% {
+                top: -6px;
+            }
         }
     }
 }

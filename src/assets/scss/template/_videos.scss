@@ -74,7 +74,11 @@
         }
 
         &:not(:last-child) {
-            margin-bottom: 32px;
+            margin-bottom: 44px;
+
+            @media #{$mq-md} {
+                margin-bottom: 80px;
+            }
         }
     }
 
@@ -257,48 +261,36 @@
     }
 
     .instagram {
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr 1fr 28px;
-        gap: 13px 0px;
-        grid-template-areas:
-            "text"
-            "video"
-            "button";
-
-        @media #{$mq-md} {
-            grid-template-columns: 1fr 1fr;
-            grid-template-rows: 1fr 1fr;
-            gap: 26px 54px;
-            grid-template-areas:
-                "video text"
-                "video button";
-        }
+        display: flex;
+        flex-direction: column;
+        align-items: center;
 
         &:not(:last-child) {
-            margin-bottom: 32px;
+            margin-bottom: 50px;
+
+            @media #{$mq-md} {
+                margin-bottom: 70px;
+            }
         }
 
         .instagram-text {
             grid-area: text;
-            margin-bottom: 7px;
 
-            @media #{$mq-md} {
-                margin-bottom: 0;
+            &:not(:last-child) {
+                margin-bottom: 24px;
+
+                @media #{$mq-md} {
+                    margin-bottom: 64px;
+                }
             }
 
             .sub-title {
-                font-size: 16.67px;
+                font-size: 18px;
 
                 @media #{$mq-md} {
-                    font-size: 30.48px;
-                    text-align: left;
+                    font-size: 40px;
                 }
             }
-        }
-
-        .instagram-video {
-            grid-area: video;
         }
 
         .instagram-button {
@@ -340,10 +332,14 @@
     }
 
     .arrow {
-        position: relative;
         width: 16px;
         height: 13px;
+        position: relative;
+        top: -6px;
         margin: 28px auto 0;
+        animation-name: shake;
+        animation-duration: 1.5s;
+        animation-iteration-count: infinite;
 
         @media #{$mq-md} {
             width: 32px;
@@ -376,6 +372,18 @@
         &::after {
             right: 0;
             transform: rotate(-45deg);
+        }
+
+        @keyframes shake {
+            0% {
+                top: -6px;
+            }
+            50% {
+                top: 2px;
+            }
+            100% {
+                top: -6px;
+            }
         }
     }
 }

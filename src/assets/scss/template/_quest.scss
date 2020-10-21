@@ -38,13 +38,14 @@
         .form-box {
             padding: 17px 22px 26px;
             border-radius: 30px;
-            background-color: $c-pink-2;
+            // background-color: $c-pink-2;
+            background-color: #fafafa;
             -webkit-box-shadow: 0px 50px 100px 0px rgba(20, 49, 88, 0.8);
             -moz-box-shadow: 0px 50px 100px 0px rgba(20, 49, 88, 0.8);
             box-shadow: 0px 50px 100px 0px rgba(20, 49, 88, 0.8);
 
             @media #{$mq-md} {
-                padding: 42px 40px 28px;
+                padding: 42px 24px 28px;
             }
         }
 
@@ -54,10 +55,11 @@
             font-size: 16px;
             line-height: 1.2;
             text-align: center;
-            color: $c-white;
+            // color: $c-white;
+            color: $c-blue-2;
 
             @media #{$mq-md} {
-                font-size: 30px;
+                font-size: 28px;
             }
 
             &:not(:last-child) {
@@ -68,7 +70,13 @@
                 }
             }
 
-            br {
+            .only-mobile {
+                @media #{$mq-md} {
+                    display: none;
+                }
+            }
+
+            .only-desktop {
                 display: none;
 
                 @media #{$mq-md} {
@@ -84,6 +92,10 @@
                 @media #{$mq-md} {
                     margin-bottom: 18px;
                 }
+            }
+
+            iframe {
+                min-height: 875px;
             }
         }
 
@@ -265,10 +277,14 @@
     }
 
     .arrow {
-        position: relative;
         width: 16px;
         height: 13px;
-        margin: 0 auto;
+        position: relative;
+        top: -6px;
+        margin: 28px auto 0;
+        animation-name: shake;
+        animation-duration: 1.5s;
+        animation-iteration-count: infinite;
 
         @media #{$mq-md} {
             width: 32px;
@@ -300,6 +316,18 @@
         &::after {
             right: 0;
             transform: rotate(-45deg);
+        }
+
+        @keyframes shake {
+            0% {
+                top: -6px;
+            }
+            50% {
+                top: 2px;
+            }
+            100% {
+                top: -6px;
+            }
         }
     }
 }

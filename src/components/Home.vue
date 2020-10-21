@@ -27,9 +27,10 @@
     <section>
       <div class="experiences">
         <h2 class="title">
-          AS EXPERIÊNCIAS <br class="only-mobile" />INESQUECÍVEIS
+          <!-- AS EXPERIÊNCIAS <br class="only-mobile" />INESQUECÍVEIS
           <br class="only-mobile" />QUE <br class="only-desktop" />VÃO DAR ASAS
-          <br class="only-mobile" />PRO SEU VERÃO SÃO:
+          <br class="only-mobile" />PRO SEU VERÃO SÃO: -->
+          SE LIGA NAS EXPERIÊNCIAS <br class="only-mobile">INESQUECÍVEIS <br class="only-desktop">QUE VOCÊ <br class="only-mobile">PODE VIVER NESSE VERÃO:
         </h2>
         <div class="experience-carousel">
           <carousel-3d
@@ -66,7 +67,7 @@
               <div class="card rafael-goberna">
                 <h3 class="card-title">
                   <span class="line"
-                    >PARAGLINDER <span class="small">COM</span></span
+                    >PARAGLIDER <span class="small">COM</span></span
                   ><br />
                   <span class="large">RAFAEL GOBERNA</span>
                 </h3>
@@ -123,7 +124,6 @@
           </h4>
           <div class="arrow"></div>
         </div>
-        <div v-rellax="{speed: 2.2}" class="parallax can-1"></div>
       </div>
     </section>
     <section>
@@ -415,7 +415,7 @@
                 <div class="quiz-content-body">
                   <p>
                     Flakes Power já traçou o desafio que vai tornar esse verão
-                    inesquecível. Sabe qual é?
+                    inesquecível. <br>Sabe qual é?
                   </p>
                   <ul>
                     <li>
@@ -475,7 +475,7 @@
               </div>
               <div class="quiz-content-action">
                 <div class="count">
-                  {{ `${quiz.step + 1}/${quiz.quests.length}` }}
+                  <span>{{ `${quiz.step + 1}/${quiz.quests.length}` }}</span>
                 </div>
                 <button v-on:click="nextQuest" class="btn yellow-1">
                   Próxima
@@ -546,7 +546,7 @@
                   <div class="quiz-content-text">
                     <h4>
                       <span class="line"
-                        >PARAGLINDER <span class="small">COM</span></span
+                        >PARAGLIDER <span class="small">COM</span></span
                       ><br />
                       <span class="large">RAFAEL GOBERNA</span>
                     </h4>
@@ -623,9 +623,8 @@
             >
               <div class="quiz-content-header">
                 <h3>
-                  Qual experiência <br class="only-mobile" />você escolhe
-                  <br class="only-desktop" />pro seu
-                  <br class="only-mobile" />verão ser inesquecível?
+                  Qual experiência você<br class="only-mobile" /> escolhe <br class="only-desktop">pro seu verão
+                  <br class="only-mobile"> ser inesquecível?
                 </h3>
               </div>
               <div class="quiz-content-body">
@@ -681,6 +680,7 @@
           </div>
         </div>
         <div class="arrow"></div>
+        <div v-rellax="{speed: 2.2}" class="parallax can-1"></div>
       </div>
     </section>
     <section ref="questSection">
@@ -691,11 +691,11 @@
         <form v-on:submit.prevent action="" class="form">
           <div class="form-box">
             <h3 class="form-title">
-              Porque Red Bull deve dar asas <br />pra tornar seu verão
-              inesquecível?
+              Porque Red Bull deve <br class="only-mobile">dar asas <br class="only-desktop">pra tornar seu <br class="only-mobile">verão inesquecível?
             </h3>
             <div class="form-body">
-              <div class="form-row">
+              <iframe style="overflow-x: hidden;" width="100%" src="https://redbull.jotform.com/202811191284046" frameborder="0" onload="this.style.height=(this.contentWindow.document.body.scrollHeight+20)+'px';"></iframe>
+              <!-- <div class="form-row">
                 <div class="form-control">
                   <textarea
                     v-model="questForm.message.val"
@@ -787,9 +787,9 @@
                 name="experience"
                 id="experience"
                 v-model="questForm.experience.val"
-              />
+              /> -->
             </div>
-            <div class="form-terms">
+            <!-- <div class="form-terms">
               <p>
                 Ao criar uma conta (por meio de registro de e-mail ou via login
                 das redes sociais), aceito que meus dados pessoais possam ser
@@ -805,8 +805,8 @@
                   >termos de condições de participação.*</a
                 ></label
               >
-            </div>
-            <div class="form-action">
+            </div> -->
+            <!-- <div class="form-action">
               <div v-show="questForm.terms.error" class="form-control">
                 <br />
                 <label class="error" for="terms">{{
@@ -817,7 +817,7 @@
               <button v-on:click="validateForm()" class="btn yellow-1">
                 Enviar
               </button>
-            </div>
+            </div> -->
           </div>
         </form>
         <div class="arrow"></div>
@@ -827,12 +827,9 @@
     <section>
       <div class="videos">
         <h4 class="sub-title">
-          VOCÊ CORRE O RISCO DE VIVER <br class="only-mobile" />UMA EXPERIÊNCIA
-          EXCLUSIVA <br />COM UM DOS ATLETAS <br class="only-mobile" />MAIS
-          INSANOS DO MUNDO. <br />
-          <span
-            >É BOM TER ASSUNTO COM ELE. <br class="only-mobile" />DÁ O PLAY E SE
-            LIGA.</span
+          QUER SABER MAIS SOBRE OS ATLETAS?
+          <br />
+          <span>DÁ O PLAY ABAIXO PRA ACESSAR <br class="only-mobile">OS CONTEÚDOS.</span
           >
         </h4>
         <div class="video-track">
@@ -874,10 +871,10 @@
                   class="video-thumb rafael-goberna"
                 >
                   <div class="video-info">
-                    <h6 class="video-title">Paraglinder Goberna</h6>
+                    <h6 class="video-title">Paraglider Goberna</h6>
                     <span class="video-persona">Rafael Goberna</span>
                     <div class="video-desc">
-                      <span class="video-type">Paraglinder</span>
+                      <span class="video-type">Paraglider</span>
                       <span class="video-time">2 min</span>
                     </div>
                   </div>
@@ -913,15 +910,12 @@
         <div class="instagram">
           <div class="instagram-text">
             <h4 class="sub-title">
-              JÁ COMECE A CURTIR <br class="only-desktop" />O CLIMA DO VERÃO
-              <br /><span>COM ESSE GAME</span> <br class="only-desktop" /><span
-                >NO INSTAGRAM.</span
-              >
+              JÁ COMECE A CURTIR O CLIMA DO VERÃO
+              <br /><span>COM ESSE GAME NO INSTAGRAM.</span>
             </h4>
           </div>
-          <div class="instagram-video"></div>
           <div class="instagram-button">
-            <button v-on:click="checkDevice" class="btn pink-2">Experimentar</button>
+            <button v-on:click="checkDevice" class="btn pink-2">Jogue agora</button>
             <div v-show="!isMobile" class="tooltip">
               Acesse o site pelo celular para <br>
               aproveitar o filtro de verão!

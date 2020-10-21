@@ -143,10 +143,14 @@
         }
 
         .arrow {
-            position: relative;
             width: 32px;
             height: 18px;
+            position: relative;
+            top: -6px;
             margin: 18px auto 0;
+            animation-name: shake;
+            animation-duration: 1.5s;
+            animation-iteration-count: infinite;
 
             &::before,
             &::after {
@@ -168,6 +172,18 @@
             &::after {
                 right: 0;
                 transform: rotate(-45deg);
+            }
+
+            @keyframes shake {
+                0% {
+                    top: -6px;
+                }
+                50% {
+                    top: 2px;
+                }
+                100% {
+                    top: -6px;
+                }
             }
         }
     }

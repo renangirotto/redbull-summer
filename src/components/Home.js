@@ -17,7 +17,7 @@ export default {
                 height: 219,
                 space: 100,
                 index: 0,
-                arrows: 26
+                arrows: 26,
             },
             quiz: {
                 step: 0,
@@ -86,13 +86,14 @@ export default {
                 arrows: false,
                 infinite: true,
                 speed: 500,
-                centerMode: true,
                 slidesToScroll: 1,
+                centerMode: true,
                 responsive: [
                     {
-                        breakpoint: 439,
+                        breakpoint: 575,
                         settings: {
                             slidesToShow: 1,
+                            centerPadding: '20%',
                         }
                     },
                     {
@@ -147,6 +148,15 @@ export default {
     },
     mounted() {
         setTimeout(() => { this.$refs['expCarousel'].$el.style.height = 'auto'; }, 50);
+
+        // Teste iframe
+        // var iframe = this.$refs.testa;
+        // setTimeout(() => {
+        //     var iframe = document.getElementById('testa')
+        //     iframe.addEventListener("load", function () {
+        //         // console.log(iframe.contentWindow.document.getElementsByTagName("ul")[0])
+        //     });
+        // }, 1000)
     },
     methods: {
         // There isn't a bullet support in the carousel-3d library

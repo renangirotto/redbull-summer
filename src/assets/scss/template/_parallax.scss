@@ -168,7 +168,7 @@
     &.can-1 {
         width: 280px;
         height: 546px;
-        top: 190px;
+        top: 340px;
         left: 100%;
         background-image: url("https://web02137.microsites02.redbull.com/summer/images/template/can-1.png");
         opacity: 0;
@@ -181,7 +181,7 @@
         @media #{$mq-lg} {
             width: 350px;
             height: 682px;
-            top: 255px;
+            top: 385px;
             left: calc(100% - 260px);
         }
 
