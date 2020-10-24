@@ -321,10 +321,14 @@
         z-index: $z-lvl-1;
 
         .sub-title {
-            font-size: 16.67px;
+            font-size: 21px;
+
+            @media #{$mq-xs} {
+                font-size: 32px;
+            }
 
             @media #{$mq-md} {
-                font-size: 32px;
+                font-size: 48px;
             }
         }
 

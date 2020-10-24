@@ -314,7 +314,7 @@ export default {
             if (!check) {
                 this.isMobile = false
             } else {
-                window.open("https://www.w3schools.com");
+                window.open("https://www.instagram.com/ar/367997181056158/");
             }
 
         }

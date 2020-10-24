@@ -27,10 +27,7 @@
     <section>
       <div class="experiences">
         <h2 class="title">
-          <!-- AS EXPERIÊNCIAS <br class="only-mobile" />INESQUECÍVEIS
-          <br class="only-mobile" />QUE <br class="only-desktop" />VÃO DAR ASAS
-          <br class="only-mobile" />PRO SEU VERÃO SÃO: -->
-          SE LIGA NAS EXPERIÊNCIAS <br class="only-mobile">INESQUECÍVEIS <br class="only-desktop">QUE VOCÊ <br class="only-mobile">PODE VIVER NESSE VERÃO:
+          ROLE PRO LADO E SE <br class="only-mobile">LIGUE NAS EXPERIÊNCIAS <br>INESQUECÍVEIS QUE VOCÊ <br class="only-mobile">PODE VIVER NESSE VERÃO:
         </h2>
         <div class="experience-carousel">
           <carousel-3d
@@ -119,8 +116,7 @@
         </div>
         <div class="experiences-anchor">
           <h4 class="sub-title">
-            PRA PARTICIPAR É SÓ ROLAR PRA BAIXO, <br />
-            <span>RESPONDER O QUIZ E SE CADASTRAR.</span>
+            PRA PARTICIPAR, É SÓ<br> <span>RESPONDER O QUIZ E SE CADASTRAR.</span>
           </h4>
           <div class="arrow"></div>
         </div>
@@ -686,15 +682,12 @@
     <section ref="questSection">
       <div class="quest">
         <h2 class="title">
-          AGORA QUE VOCÊ ESCOLHEU, <br />É SÓ RESPONDER ABAIXO:
+          AGORA QUE CONHECEU <br class="only-mobile">MAIS DOS NOSSOS ATLETAS, <br>É SO PREENCHER ABAIXO E <br class="only-mobile">ESCOLHER A EXPERIÊNCIA:
         </h2>
         <form v-on:submit.prevent action="" class="form">
           <div class="form-box">
-            <h3 class="form-title">
-              Porque Red Bull deve <br class="only-mobile">dar asas <br class="only-desktop">pra tornar seu <br class="only-mobile">verão inesquecível?
-            </h3>
             <div class="form-body">
-              <iframe style="overflow-x: hidden;" width="100%" src="https://redbull.jotform.com/202811191284046" frameborder="0" onload="this.style.height=(this.contentWindow.document.body.scrollHeight+20)+'px';"></iframe>
+              <iframe style="overflow-x: hidden;" width="100%" src="https://redbull.jotform.com/202811191284046" frameborder="0"></iframe>
               <!-- <div class="form-row">
                 <div class="form-control">
                   <textarea
