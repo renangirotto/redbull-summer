@@ -78,7 +78,7 @@
         }
 
         &:not(:last-child) {
-            margin-bottom: 32px;
+            margin-bottom: 24px;
         }
 
         span {
@@ -88,17 +88,16 @@
 
     .hero-list {
         font-weight: 900;
-        font-size: 18.42px;
+        font-size: 19.42px;
         color: $c-white;
         counter-reset: list-number;
 
         @media #{$mq-md} {
-            font-size: 24.12px;
+            font-size: 32.12px;
         }
 
         > li {
             position: relative;
-            display: flex;
             line-height: 1.2;
             text-shadow: 0px 3px 1px $c-pink-1;
 
@@ -110,12 +109,20 @@
                 }
             }
 
-            &::before {
-                counter-increment: list-number;
-                content: "#" counter(list-number);
-                margin-right: 8px;
-                color: $c-brown-1;
+            a {
+                color: $c-white;
             }
+
+            span {
+                color: $c-yellow-1;
+            }
+
+            // &::before {
+            //     counter-increment: list-number;
+            //     content: "#" counter(list-number);
+            //     margin-right: 8px;
+            //     color: $c-brown-1;
+            // }
         }
     }
 

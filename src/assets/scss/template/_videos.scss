@@ -1,8 +1,8 @@
 .videos {
-    padding: 15px 0 25px;
+    padding: 15px 0 0;
 
     @media #{$mq-md} {
-        padding: 75px 0;
+        padding: 75px 0 0;
     }
 
     .sub-title {

@@ -5,17 +5,14 @@
         <div class="hero-can"></div>
         <div class="hero-text">
           <h1 class="hero-title">
-            QUER VIVER<br />UMA EXPERIÊNCIA<br /><span
-              >INESQUECÍVEL<br />NESSE VERÃO?</span
-            >
+            PARABÉNS AOS VENCEDORES
           </h1>
           <ul class="hero-list">
-            <li>PARTICIPE DO QUIZ</li>
-            <li>RESPONDA A FRASE</li>
-            <li>
-              ESCOLHA UMA EXPERIÊNCIA <br />
-              DE VERÃO
-            </li>
+            <li>Lucas Chumbo - <span>Vitienzo D. C.</span></li>
+            <li>Rafael Goberna - <span>Nastassja A. F.</span></li>
+            <li>B-Boy Pelezinho - <span>Filipe V.</span></li>
+            <li>Sandro Dias - <span>Eliza M. S. M.</span></li>
+            <li>Flakes Power - <span>Checando documentação <br>para divulgação do resultado</span></li>
           </ul>
         </div>
         <div class="hero-anchor">
@@ -116,7 +113,7 @@
         </div>
         <div class="experiences-anchor">
           <h4 class="sub-title">
-            PRA PARTICIPAR, É SÓ<br> <span>RESPONDER O QUIZ E SE CADASTRAR.</span>
+            ESTÁ EM DÚVIDA DE QUAL EXPERIÊNCIA <br>ESCOLHER? <span>RESPONDA O QUIZ E SE INSPIRE.</span>
           </h4>
           <div class="arrow"></div>
         </div>
@@ -679,144 +676,6 @@
         <div v-rellax="{speed: 2.2}" class="parallax can-1"></div>
       </div>
     </section>
-    <section ref="questSection">
-      <div class="quest">
-        <h2 class="title">
-          AGORA QUE CONHECEU <br class="only-mobile">MAIS DOS NOSSOS ATLETAS, <br>É SO PREENCHER ABAIXO E <br class="only-mobile">ESCOLHER A EXPERIÊNCIA:
-        </h2>
-        <form v-on:submit.prevent action="" class="form">
-          <div class="form-box">
-            <div class="form-body">
-              <iframe style="overflow-x: hidden;" width="100%" src="https://redbull.jotform.com/202811191284046" frameborder="0"></iframe>
-              <!-- <div class="form-row">
-                <div class="form-control">
-                  <textarea
-                    v-model="questForm.message.val"
-                    class="input textarea"
-                    name="message"
-                    id="message"
-                  ></textarea>
-                  <span v-show="!questForm.message.val" class="placeholder"
-                    >Digite aqui</span
-                  >
-                  <label
-                    class="error"
-                    v-show="questForm.message.error"
-                    for="name"
-                    >{{ questForm.message.error }}</label
-                  >
-                </div>
-              </div>
-              <div class="form-row">
-                <div class="form-control">
-                  <input
-                    class="input"
-                    type="text"
-                    name="name"
-                    id="name"
-                    placeholder="Nome Completo:"
-                    v-model="questForm.name.val"
-                  />
-                  <label
-                    class="error"
-                    v-show="questForm.name.error"
-                    for="name"
-                    >{{ questForm.name.error }}</label
-                  >
-                </div>
-              </div>
-              <div class="form-row">
-                <div class="form-control">
-                  <input
-                    class="input"
-                    type="text"
-                    name="doc"
-                    id="doc"
-                    placeholder="CPF: 000.000.000-00"
-                    v-model="questForm.doc.val"
-                  />
-                  <label class="error" v-show="questForm.doc.error" for="doc">{{
-                    questForm.doc.error
-                  }}</label>
-                </div>
-                <div class="form-control">
-                  <input
-                    class="input"
-                    type="email"
-                    name="email"
-                    id="email"
-                    placeholder="Email: redbull@redbull.com.br"
-                    v-model="questForm.email.val"
-                  />
-                  <label
-                    class="error"
-                    v-show="questForm.email.error"
-                    for="email"
-                    >{{ questForm.email.error }}</label
-                  >
-                </div>
-              </div>
-              <div class="form-row">
-                <div class="form-control">
-                  <input
-                    class="input"
-                    type="text"
-                    name="address"
-                    id="address"
-                    placeholder="Endereço:"
-                    v-model="questForm.address.val"
-                  />
-                  <label
-                    class="error"
-                    v-show="questForm.address.error"
-                    for="address"
-                    >{{ questForm.address.error }}</label
-                  >
-                </div>
-              </div>
-              <input
-                style="display: none"
-                type="text"
-                name="experience"
-                id="experience"
-                v-model="questForm.experience.val"
-              /> -->
-            </div>
-            <!-- <div class="form-terms">
-              <p>
-                Ao criar uma conta (por meio de registro de e-mail ou via login
-                das redes sociais), aceito que meus dados pessoais possam ser
-                usados pela Red Bull e suas
-                <a href="#" target="_blank">empresas afiliadas</a> como
-                declarodo na <a href="#">Política de Privacidade</a> (por ex.,
-                ajustar os conteúdos de acordo com suas preferências).
-              </p>
-              <input type="checkbox" id="terms" name="terms" ref="terms" />
-              <label for="terms"
-                >Declaro que tenho 18 anos ou mais e Li e Aceitei os
-                <a href="#" target="_blank"
-                  >termos de condições de participação.*</a
-                ></label
-              >
-            </div> -->
-            <!-- <div class="form-action">
-              <div v-show="questForm.terms.error" class="form-control">
-                <br />
-                <label class="error" for="terms">{{
-                  questForm.terms.error
-                }}</label>
-                <br />
-              </div>
-              <button v-on:click="validateForm()" class="btn yellow-1">
-                Enviar
-              </button>
-            </div> -->
-          </div>
-        </form>
-        <div class="arrow"></div>
-        <div v-rellax="{speed: 2.4}" class="parallax can-2"></div>
-      </div>
-    </section>
     <section>
       <div class="videos">
         <h4 class="sub-title">
@@ -900,22 +759,6 @@
             </VueSlickCarousel>
           </div>
         </div>
-        <div class="instagram">
-          <div class="instagram-text">
-            <h4 class="sub-title">
-              JÁ COMECE A CURTIR O CLIMA DO VERÃO
-              <br /><span>COM ESSE GAME NO INSTAGRAM.</span>
-            </h4>
-          </div>
-          <div class="instagram-button">
-            <button v-on:click="checkDevice" class="btn pink-2">Jogue agora</button>
-            <div v-show="!isMobile" class="tooltip">
-              Acesse o site pelo celular para <br>
-              aproveitar o filtro de verão!
-              </div>
-          </div>
-        </div>
-        <div class="arrow"></div>
       </div>
     </section>
     <div v-show="videos.play" class="video-modal">

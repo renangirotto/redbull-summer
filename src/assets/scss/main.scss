@@ -100,3 +100,49 @@
     cursor: pointer;
     cursor: hand;
 }
+
+.dark-theme .caption-and-content-layout-rbx {
+    background-color: $c-blue-1;
+}
+
+.caption-and-content-layout-rbx--centered-caption .panel-caption-rbx__text {
+    position: relative;
+    z-index: $z-lvl-1;
+    font-weight: 700;
+    font-style: italic;
+    font-size: 27.8px;
+    text-align: center;
+    text-shadow: 0px 4px 1px $c-red-1;
+    line-height: 1.2;
+    color: $c-yellow-1;
+
+    @media #{$mq-md} {
+        font-size: 40px;
+    }
+
+    @media #{$mq-lg} {
+        font-size: 58.33px;
+    }
+}
+
+.card-feed-layout__load-more .button.button--clickable {
+    border: 0;
+    border-radius: 15px;
+    padding: 6px 12px;
+    font-family: $f-futura-cond;
+    font-weight: 800;
+    font-style: italic;
+    font-size: 12.5px;
+    color: $c-pink-5;
+    background-color: $c-pink-2;
+
+    @media #{$mq-md} {
+        padding: 8px 30px;
+        border-radius: 25px;
+        font-size: 26.92px;
+    }
+
+    .button__icon.button__icon--view-more {
+        display: none;
+    }
+}
