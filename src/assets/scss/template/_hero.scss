@@ -4,16 +4,10 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 72px 20px 44px;
+    padding: 72px 20px 69px;
 
     @media #{$mq-md} {
-        flex-direction: row;
-        justify-content: center;
-        padding: 89px 20px 140px;
-    }
-
-    @media #{$mq-lg} {
-        padding: 89px 0 85px;
+        padding-top: 89px;
     }
 
     .hero-can {
@@ -21,23 +15,23 @@
         max-width: 239px;
         height: 390px;
         margin: 0 auto;
-        background-image: url("https://web02137.microsites02.redbull.com/summer/images/template/can-hero-mobile.png");
+        background-image: url("https://web02137.microsites02.redbull.com/summer/images/template/can-hero.png");
         background-position: center;
         background-repeat: no-repeat;
         background-size: 100%;
 
-        @media #{$mq-md} {
-            max-width: 276px;
-            height: 646px;
-            margin: 0 70px 0 0;
-            background-image: url("https://web02137.microsites02.redbull.com/summer/images/template/can-hero-desktop.png");
-        }
+        // @media #{$mq-md} {
+        //     max-width: 276px;
+        //     height: 646px;
+        //     margin: 0 70px 0 0;
+        //     background-image: url("https://web02137.microsites02.redbull.com/summer/images/template/can-hero-desktop.png");
+        // }
 
-        @media #{$mq-lg} {
-            max-width: 406px;
-            height: 935px;
-            margin: 84px 140px 0 0;
-        }
+        // @media #{$mq-lg} {
+        //     max-width: 406px;
+        //     height: 935px;
+        //     margin: 84px 140px 0 0;
+        // }
     }
 
     .hero-text {
@@ -45,12 +39,8 @@
         margin-top: -41px;
         z-index: $z-lvl-1;
 
-        @media #{$mq-md} {
-            margin-top: 0;
-        }
-
         @media #{$mq-lg} {
-            margin-top: -72px;
+            margin-top: -40px;
         }
 
         &:not(:last-child) {
@@ -68,13 +58,14 @@
         text-transform: uppercase;
         line-height: 1.048;
         color: $c-white;
+        text-align: center;
 
         @media #{$mq-md} {
             font-size: 48px;
         }
 
         @media #{$mq-lg} {
-            font-size: 61.15px;
+            font-size: 80px;
         }
 
         &:not(:last-child) {

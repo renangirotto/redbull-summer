@@ -31,6 +31,19 @@
 
 @font-face {
     font-family: 'Futura Std Cond';
+    src: url('../fonts/FuturaStdCond/light/FuturaStd-CondensedLight.eot');
+    src: url('../fonts/FuturaStdCond/light/FuturaStd-CondensedLight.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/FuturaStdCond/light/FuturaStd-CondensedLight.woff2') format('woff2'),
+        url('../fonts/FuturaStdCond/light/FuturaStd-CondensedLight.woff') format('woff'),
+        url('../fonts/FuturaStdCond/light/FuturaStd-CondensedLight.ttf') format('truetype'),
+        url('../fonts/FuturaStdCond/light/FuturaStd-CondensedLight.svg#FuturaStd-CondensedOblique') format('svg');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Futura Std Cond';
     src: url('../fonts/FuturaStdCond/oblique/FuturaStd-CondensedOblique.eot');
     src: url('../fonts/FuturaStdCond/oblique/FuturaStd-CondensedOblique.eot?#iefix') format('embedded-opentype'),
         url('../fonts/FuturaStdCond/oblique/FuturaStd-CondensedOblique.woff2') format('woff2'),

@@ -168,31 +168,31 @@
     &.can-1 {
         width: 280px;
         height: 546px;
-        top: 340px;
+        top: 133px;
         left: 100%;
         background-image: url("https://web02137.microsites02.redbull.com/summer/images/template/can-1.png");
         opacity: 0;
 
         @media #{$mq-md} {
             left: calc(100% - 240px);
-            opacity: 1;
         }
 
         @media #{$mq-lg} {
             width: 280px;
             height: 546px;
-            top: 540px;
+            top: 133px;
             left: calc(100% - 290px);
+            opacity: 1;
         }
 
         @media #{$mq-xl} {
-            left: calc(50% + 270px);
+            left: calc(50% + 410px);
         }
 
         @media #{$mq-xxl} {
-            width: 330px;
-            height: 640px;
-            left: calc(50% + 250px);
+            width: 350px;
+            height: 680px;
+            left: calc(50% + 380px);
         }
     }
 

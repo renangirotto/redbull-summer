@@ -1,10 +1,6 @@
 .experiences {
     position: relative;
-    padding: 0 0 15px;
-
-    @media #{$mq-md} {
-        padding-bottom: 75px;
-    }
+    padding: 0 0 75px;
 
     .title {
         &:not(:last-child) {
@@ -23,10 +19,10 @@
         z-index: $z-lvl-1;
 
         &:not(:last-child) {
-            margin-bottom: 27px;
+            margin-bottom: 40px;
 
             @media #{$mq-md} {
-                margin-bottom: 45px;
+                margin-bottom: 50px;
             }
         }
 
@@ -57,29 +53,26 @@
                 margin-bottom: 20px;
                 font-weight: 800;
                 font-style: italic;
-                font-size: 31.28px;
-                line-height: 1.1;
+                font-size: 26px;
+                line-height: 1.3;
                 text-shadow: -2px 3px 1px $c-pink-2;
+                text-align: center;
                 color: $c-white;
 
                 @media #{$mq-md} {
                     margin-bottom: 30px;
-                    font-size: 76.46px;
+                    font-size: 54px;
+                    line-height: 1.1;
                     text-shadow: -2.5px 3px 1px $c-pink-2;
                     letter-spacing: -1.5px;
                 }
 
                 .line {
                     display: inline-block;
-                    margin-left: 14px;
-
-                    @media #{$mq-md} {
-                        margin-left: 34px;
-                    }
                 }
 
                 .small {
-                    font-size: 17.38px;
+                    font-size: 16px;
 
                     @media #{$mq-md} {
                         font-size: 42.48px;
@@ -87,11 +80,20 @@
                 }
 
                 .large {
-                    font-size: 38.23px;
+                    font-size: 32px;
 
                     @media #{$mq-md} {
-                        font-size: 93.45px;
+                        font-size: 75px;
                     }
+                }
+            }
+
+            .winner {
+                font-size: 32px;
+                color: $c-yellow-1;
+
+                @media #{$mq-md} {
+                    font-size: 75px;
                 }
             }
 
@@ -101,32 +103,18 @@
 
             &.sandro-dias {
                 background-image: url("https://web02137.microsites02.redbull.com/summer/images/experience/sandro-dias.png");
+
+                .card-title {
+                    font-size: 20px;
+
+                    @media #{$mq-md} {
+                        font-size: 54px;
+                    }
+                }
             }
 
             &.rafael-goberna {
                 background-image: url("https://web02137.microsites02.redbull.com/summer/images/experience/rafael-goberna.png");
-
-                .card-title {
-                    @media #{$mq-md} {
-                        font-size: 64.46px;
-                    }
-
-                    .line {
-                        margin-left: 8px;
-
-                        @media #{$mq-md} {
-                            margin-left: 34px;
-                        }
-                    }
-
-                    .large {
-                        font-size: 32px;
-
-                        @media #{$mq-md} {
-                            font-size: 80.45px;
-                        }
-                    }
-                }
             }
 
             &.pelezinho {
@@ -136,27 +124,9 @@
                 .card-title {
                     margin-bottom: 0;
                     margin-top: 20px;
-                    font-size: 28.28px;
 
                     @media #{$mq-md} {
                         margin-top: 30px;
-                        font-size: 64.46px;
-                    }
-
-                    .line {
-                        margin-left: 8px;
-
-                        @media #{$mq-md} {
-                            margin-left: 34px;
-                        }
-                    }
-
-                    .large {
-                        font-size: 32px;
-
-                        @media #{$mq-md} {
-                            font-size: 80.45px;
-                        }
                     }
                 }
             }
@@ -291,7 +261,7 @@
             button {
                 width: 8px;
                 height: 8px;
-                border: 2px solid $c-pink-3;
+                border: 2px solid $c-white;
                 border-radius: 50%;
                 background-color: transparent;
                 cursor: pointer;
@@ -310,9 +280,21 @@
                 }
 
                 &.active {
-                    background-color: $c-pink-3;
+                    background-color: $c-white;
                 }
             }
+        }
+    }
+
+    .experience-rules {
+        font-family: 'Futura Std Cond';
+        font-weight: 300;
+        font-size: 28px;
+        text-align: center;
+        color: $c-white;
+
+        a {
+            color: $c-yellow-1;
         }
     }
 
